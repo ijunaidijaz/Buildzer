@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    tools:context=".appCode.calendarModule.monthDetailModule.CalendarActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/mTvTitleTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/medium_poppins"
+            android:text=""
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_mediumLarge"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvBack"
+            app:layout_constraintStart_toEndOf="@+id/mIvBack"
+            app:layout_constraintTop_toTopOf="@+id/mIvBack" />
+
+        <ImageView
+            android:id="@+id/mIvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:padding="@dimen/margin_1x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_black"
+            app:tint="@color/black_color"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:fontFamily="@font/normal_poppins"
+            android:text="Calendar"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_mediumLarge"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/mTvTitleTop"
+            app:layout_constraintStart_toEndOf="@+id/mTvTitleTop"
+            app:layout_constraintTop_toTopOf="@+id/mTvTitleTop" />
+
+        <ImageView
+            android:id="@+id/mIvMenus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="@dimen/margin_1x"
+            android:tint="@color/black_color"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/mTvTitleTop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mTvTitleTop"
+            app:srcCompat="@drawable/ic_whitedotes"
+            tools:ignore="UseAppTint,VectorDrawableCompat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/monthNavigate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/light_orange_rounded"
+        android:paddingTop="@dimen/margin_1x"
+        android:paddingBottom="@dimen/margin_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <TextView
+            android:id="@+id/tvPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:drawableStart="@drawable/ic_whitebackward"
+            android:gravity="clip_vertical|start"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvCurrent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCurrent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/medium_poppins"
+            android:gravity="center"
+            android:hint=""
+            android:singleLine="true"
+            android:text="Current"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvNext"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvPrev"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:drawableEnd="@drawable/ic_whiteforward"
+            android:gravity="end|center_vertical"
+            android:singleLine="true"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvCurrent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarWeeks"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_1x"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:layout_marginEnd="@dimen/margin_1x"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monthNavigate"
+        app:spanCount="7"
+        tools:itemCount="7"
+        tools:listitem="@layout/item_reminder_cal_week_header" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent_alpha"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_2x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarWeeks" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarMonth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_1x"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:layout_marginEnd="@dimen/margin_1x"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v1"
+        app:spanCount="7"
+        tools:itemCount="14"
+        tools:listitem="@layout/item_reminder_cal_day" />
+
+    <View
+        android:id="@+id/v2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent_alpha"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarMonth" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCalendarItems"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v2"
+        tools:itemCount="1"
+        tools:listitem="@layout/row_item_calendaritems" />
+    <ImageView
+        android:id="@+id/mIvAddCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_addorange_newicon"
+        app:layout_constraintBottom_toBottomOf="@+id/rvCalendarItems"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- <com.applandeo.materialcalendarview.CalendarView
+         android:id="@+id/calendarView"
+         android:layout_width="0dp"
+         android:layout_height="0dp"
+         android:visibility="gone"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+         app:layout_constraintVertical_bias="1.0" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_color"
+    android:id="@+id/leadParent"
+    tools:context=".appCode.home.HomeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/medium_poppins"
+            android:text="Updates"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_mediumLarge"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="@dimen/margin_1x"
+            android:src="@drawable/ic_setting_newicon"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNotifications"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView136"
+        tools:itemCount="5"
+        tools:listitem="@layout/row_item_notifications" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/imageView80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:tint="@color/colorAccent"
+        android:src="@drawable/ic_walletscreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        tools:ignore="UseAppTint" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/textView135"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Total Balance"
+        android:fontFamily="@font/normal_poppins"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toEndOf="@+id/imageView80"
+        app:layout_constraintTop_toTopOf="@+id/imageView80" />
+
+    <TextView
+        android:id="@+id/textView136"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/medium_poppins"
+        android:text="Transaction History"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/text_mediumLarge"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+    <TextView
+        android:id="@+id/textView137"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        android:visibility="gone"
+        android:fontFamily="@font/normal_poppins"
+        android:textColor="@color/leads_color"
+        android:textSize="@dimen/text_very_small"
+        app:layout_constraintStart_toStartOf="@+id/textView135"
+        app:layout_constraintTop_toBottomOf="@+id/textView135" />
+
+    <TextView
+        android:id="@+id/textView138"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:fontFamily="@font/normal_poppins"
+        android:text="135.00"
+        android:visibility="gone"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/text_large"
+        app:layout_constraintStart_toEndOf="@+id/textView137"
+        app:layout_constraintTop_toBottomOf="@+id/textView135" />
+
+    <TextView
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Transfer"
+        android:visibility="gone"
+        android:letterSpacing=".1"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:padding="@dimen/margin_2x"
+        android:textColor="@color/white_color"
+        android:fontFamily="@font/medium_poppins"
+        android:backgroundTint="@color/colorPrimary"
+        android:textSize="@dimen/text_mediumLarge"
+        android:background="@drawable/round_shape_outlinedwhitesolid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView80"
+        app:layout_constraintTop_toBottomOf="@+id/imageView80" />
+</androidx.constraintlayout.widget.ConstraintLayout>

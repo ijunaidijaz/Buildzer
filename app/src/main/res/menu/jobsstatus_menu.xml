@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ongoing"
+        android:title="Ongoing" />
+    <item
+        android:id="@+id/pending"
+        android:title="Pending" />
+<item
+        android:id="@+id/completed"
+        android:title="Completed" />
+
+    <!--<item
+        android:id="@+id/demo"
+        android:title="Demo" />
+<item
+        android:id="@+id/plumbing"
+        android:title="Plumbing" />
+<item
+        android:id="@+id/electrical"
+        android:title="Electrical" />
+<item
+        android:id="@+id/painting"
+        android:title="Painting" />
+<item
+        android:id="@+id/finishes"
+        android:title="Finishes" />-->
+</menu>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_1x"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <CheckedTextView
+        android:id="@+id/tvDayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/selector_cal_bg"
+        android:checked="false"
+        android:gravity="center"
+        android:maxLength="2"
+        android:text="10"
+        android:textAlignment="center"
+        android:textColor="@drawable/selector_cal_text"
+        android:textSize="@dimen/text_medium"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAdherenceCalDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDayName"
+        android:layout_centerHorizontal="true"
+        android:minHeight="@dimen/margin_4x"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="1"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_reminder_cal_dots" />
+
+    <TextView
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvAdherenceCalDots"
+        android:layout_centerHorizontal="true"
+        android:minHeight="@dimen/margin_4x"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:text="Today"
+        android:textSize="@dimen/_5sdp" />
+
+    <TextView
+        android:id="@+id/tvMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rvAdherenceCalDots"
+        android:layout_centerHorizontal="true"
+        android:text="..."
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/text_medium"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

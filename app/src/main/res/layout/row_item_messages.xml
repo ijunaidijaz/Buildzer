@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_1_1x">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_1_1x">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivuser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_1x"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/profilesales"
+            android:visibility="gone"
+            app:civ_border_color="@color/white_color"
+            app:civ_border_width="1dp" />
+
+        <RelativeLayout
+            android:id="@+id/relative_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@+id/ivuser"
+            android:background="@drawable/round_shape_outlined"
+            android:elevation="@dimen/margin_1x"
+            android:padding="@dimen/margin_2x">
+
+            <RelativeLayout
+                android:id="@+id/relative_left_Message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/left_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_1x"
+                    android:layout_toLeftOf="@+id/left_message_time"
+                    android:autoLink="web"
+                    android:linksClickable="true"
+                    android:text="Let me check but I think we had it right"
+                    android:textColor="@color/black_color"
+                    android:textColorLink="@color/blue"
+                    android:textSize="@dimen/text_mediumLarge" />
+
+                <RelativeLayout
+                    android:id="@+id/image_layout_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/margin_2x"
+                    android:layout_marginRight="@dimen/margin_2x"
+                    android:layout_toLeftOf="@+id/left_name"
+                    android:visibility="gone">
+
+                    <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/image_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:riv_border_color="@color/colorPrimary"
+                        app:riv_border_width="1dip"
+                        app:riv_corner_radius="15dp"
+                        app:riv_mutate_background="true"
+                        app:riv_tile_mode="repeat" />
+
+                    <ImageView
+                        android:id="@+id/video_play_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/left_message_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="2 min"
+                    android:textColor="@color/leads_color"
+                    android:textSize="@dimen/text_very_small" />
+
+                <TextView
+                    android:id="@+id/left_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/left_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="bottom|right"
+                    android:text="David"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/right_arrow"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/relative_left"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/relative_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative_left"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/drawable_button111"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/relative_right_Message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_1x"
+                android:padding="@dimen/margin_2x">
+
+
+                <RelativeLayout
+                    android:id="@+id/image_layout_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/margin_2x"
+                    android:layout_marginRight="@dimen/margin_2x"
+                    android:layout_toLeftOf="@+id/right_name"
+                    android:visibility="gone">
+
+                    <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/image_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        app:riv_border_color="@color/colorPrimary"
+                        app:riv_border_width="1dip"
+                        app:riv_corner_radius="15dp"
+                        app:riv_mutate_background="true"
+                        app:riv_tile_mode="repeat" />
+
+                    <ImageView
+                        android:id="@+id/video_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/right_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_1x"
+                    android:layout_toLeftOf="@+id/right_message_time"
+                    android:autoLink="web"
+                    android:linksClickable="true"
+                    android:text="Just confirmed and yes it is incorrect. Julie, can you please change it since you are the admin?"
+                    android:textColor="@android:color/black"
+                    android:textColorLink="@color/blue"
+                    android:textSize="@dimen/text_mediumLarge" />
+
+                <TextView
+                    android:id="@+id/right_message_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="just now"
+                    android:textColor="@color/leads_color"
+                    android:textSize="@dimen/text_very_small" />
+
+                <TextView
+                    android:id="@+id/right_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/right_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="bottom|right"
+                    android:text="You"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/mTvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/normal_poppins"
+        android:singleLine="true"
+        android:text="Jocelyn Korsgaard"
+        android:textColor="@color/black_color"
+        android:textSize="@dimen/text_mediumLarge"
+        app:layout_constraintEnd_toStartOf="@+id/mTvEmail"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mTvEmail"
+        android:layout_width="0dp"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:text="jocelyn@gmail.com"
+        android:fontFamily="@font/normal_poppins"
+        android:textSize="@dimen/text_mediumLarge"
+        android:textColor="@color/black_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mTvName"
+        app:layout_constraintTop_toTopOf="@+id/mTvName" />
+
+    <View
+        android:id="@+id/divider16"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mTvName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

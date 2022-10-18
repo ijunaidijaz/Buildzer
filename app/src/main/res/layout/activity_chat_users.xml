@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_100"
+    tools:context=".appCode.jobsModule.jobDetailModule.jobChatModule.ChatUsersActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/medium_poppins"
+            android:padding="@dimen/margin_2x"
+            android:text="Chat"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_mediumLarge"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView41"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView33"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:singleLine="true"
+            android:hint="Search"
+            android:layout_marginStart="@dimen/margin_1x"
+            android:background="@drawable/box_less_rounded_bg"
+            android:paddingTop="@dimen/margin_1x"
+            android:textSize="@dimen/text_medium"
+            android:paddingStart="@dimen/margin_2x"
+            android:paddingBottom="@dimen/margin_1x"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toStartOf="@id/mIvSearch"
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+        <ImageView
+            android:id="@+id/mIvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:padding="@dimen/margin_1x"
+            android:src="@drawable/ic_back_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:tint="@color/white_color" />
+
+        <ImageView
+            android:id="@+id/mIvSearch"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="12dp"
+            android:padding="@dimen/margin_1x"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:tint="@color/white_color" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView33"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/profilesales"
+            android:visibility="gone"
+            app:civ_border_color="@color/white_color"
+            app:civ_border_width="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mIvBack"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.523" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/normal_poppins"
+            android:text="12 Members"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/text_small"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrolling"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvChatting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="2"
+            tools:listitem="@layout/row_item_chat_user" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/daily"
+        android:title="All" />
+    <item
+        android:id="@+id/monthly"
+        android:title="Monthly" />
+    <item
+        android:id="@+id/yearly"
+        android:title="Yearly" />
+
+    <item
+        android:id="@+id/custom"
+        android:title="Custom" />
+</menu>
+

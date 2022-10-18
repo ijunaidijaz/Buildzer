@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/pending"
+        android:title="Documents" />
+    <item
+        android:id="@+id/demo"
+        android:title="Floor Plan" />
+    <item
+        android:id="@+id/plumbing"
+        android:title="Gallary" />
+    <item
+        android:id="@+id/electrical"
+        android:title="Calandar" />
+    <item
+        android:id="@+id/painting"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/finishes"
+        android:title="Group Chat" />
+
+    <item
+        android:id="@+id/end"
+        android:title="End Job" />
+
+    <item
+        android:id="@+id/cancel"
+        android:title="Cancel Job" />
+</menu>

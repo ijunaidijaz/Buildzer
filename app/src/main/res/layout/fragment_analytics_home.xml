@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white_color"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="@dimen/margin_1x"
+            android:drawableTint="@color/light_gray_color"
+            android:ems="10"
+            android:hint="Search here..."
+            android:inputType="textPersonName"
+            android:padding="@dimen/margin_2x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView61"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView56"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/profilesales"
+            app:civ_border_color="@color/light_gray_color"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName9" />
+
+        <ImageView
+            android:id="@+id/imageView61"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="@dimen/margin_1x"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName9"
+            app:layout_constraintEnd_toStartOf="@+id/imageView56"
+            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName9"
+            app:srcCompat="@drawable/ic_analyitcs_notifications"
+            tools:ignore="VectorDrawableCompat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="16dp" />
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/textView60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/medium_poppins"
+                android:text="Dashboard"
+                android:textColor="@color/black_color"
+                android:textSize="@dimen/text_mediumLarge"
+                app:layout_constraintBottom_toBottomOf="@+id/textView71Top"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toTopOf="@+id/textView71Top" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/textView71Top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="visible"
+                android:elevation="@dimen/margin_1x"
+                android:background="@drawable/oultines_gray_color"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/mTvTopFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="4dp"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:drawablePadding="@dimen/margin_1x"
+                    android:drawableTint="@color/hint_color"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Date"
+                    android:textColor="@color/hint_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_shape_outlined"
+                android:backgroundTint="@color/light_gray_color_new"
+                android:elevation="@dimen/margin_1x"
+                android:drawableEnd="@drawable/ic_search"
+                android:drawableRight="@drawable/ic_search"
+                android:drawablePadding="@dimen/margin_1x"
+                android:drawableTint="@color/light_gray_color"
+                android:ems="10"
+                android:visibility="gone"
+                android:fontFamily="@font/normal_poppins"
+                android:hint="Search..."
+                android:inputType="textPersonName"
+                android:padding="@dimen/margin_2x"
+                android:textColorHint="@color/black_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/textView71Top" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cltopinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:elevation="@dimen/margin_1x"
+                android:background="@drawable/round_shape_outlined"
+                android:backgroundTint="@color/light_gray_color_new"
+                app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/textView71Top">
+
+
+                <TextView
+                    android:id="@+id/mTvDetailsView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/appcolor_drawable_dark"
+                    android:fontFamily="@font/medium_poppins"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_1x"
+                    android:text="Leads"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/mTvLeadsView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mTvLeadsView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/white_drawable_dark"
+                    android:fontFamily="@font/medium_poppins"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_1x"
+                    android:text="Jobs"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintEnd_toStartOf="@+id/mTvProposalsView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/mTvDetailsView"
+                    app:layout_constraintTop_toTopOf="@+id/mTvDetailsView" />
+
+
+                <TextView
+                    android:id="@+id/mTvProposalsView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/white_drawable_dark"
+                    android:fontFamily="@font/medium_poppins"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_1x"
+                    android:text="Proposals"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/mTvLeadsView"
+                    app:layout_constraintTop_toTopOf="@+id/mTvDetailsView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="@dimen/margin_1x"
+                android:background="@drawable/white_drawable_dark"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout12"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
+
+                <ImageView
+                    android:id="@+id/mIvThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_bluedrops"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/mTvTitleSectionThree"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Follow Up"
+                    android:textSize="@dimen/text_very_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/mIvThree"
+                    app:layout_constraintTop_toBottomOf="@+id/mIvThree" />
+
+                <TextView
+                    android:id="@+id/mTvOngoing"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvTitleSectionThree"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionThree"
+                    app:layout_constraintTop_toBottomOf="@+id/mTvTitleSectionThree" />
+
+                <TextView
+                    android:id="@+id/mTvViewThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_rightarrow"
+                    android:drawableRight="@drawable/ic_rightarrow"
+                    android:drawablePadding="@dimen/margin_1x"
+                    android:drawableTint="@color/light_gray_color"
+                    android:fontFamily="@font/normal_poppins"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_very_small"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/mIvThree"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvOngoing"
+                    app:layout_constraintTop_toTopOf="@+id/mIvThree" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:elevation="@dimen/margin_1x"
+                android:background="@drawable/white_drawable_dark"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout10"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout10">
+
+                <ImageView
+                    android:id="@+id/mIvTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_followupnewicon"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/mTvTitleSectionTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Pending Leads"
+                    android:textColor="@color/leads_color"
+                    android:textSize="@dimen/text_very_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/mIvTwo"
+                    app:layout_constraintTop_toBottomOf="@+id/mIvTwo" />
+
+                <TextView
+                    android:id="@+id/mTvPending"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvTitleSectionTwo"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionTwo"
+                    app:layout_constraintTop_toBottomOf="@+id/mTvTitleSectionTwo" />
+
+                <TextView
+                    android:id="@+id/mTvViewTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_rightarrow"
+                    android:drawableRight="@drawable/ic_rightarrow"
+                    android:drawablePadding="@dimen/margin_1x"
+                    android:drawableTint="@color/light_gray_color"
+                    android:fontFamily="@font/normal_poppins"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_very_small"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/mIvTwo"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvPending"
+                    app:layout_constraintTop_toTopOf="@+id/mIvTwo" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="@dimen/margin_1x"
+                android:background="@drawable/white_drawable_dark"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout9"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/cltopinner">
+
+                <ImageView
+                    android:id="@+id/mIvOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_totalleadsblue"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/mTvTitleSectionOne"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Total Leads"
+                    android:textColor="@color/leads_color"
+                    android:textSize="@dimen/text_very_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/mIvOne"
+                    app:layout_constraintTop_toBottomOf="@+id/mIvOne" />
+
+                <TextView
+                    android:id="@+id/mTvTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvTitleSectionOne"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionOne"
+                    app:layout_constraintTop_toBottomOf="@+id/mTvTitleSectionOne" />
+
+                <TextView
+                    android:id="@+id/mTvViewOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_rightarrow"
+                    android:drawableRight="@drawable/ic_rightarrow"
+                    android:drawablePadding="@dimen/margin_1x"
+                    android:drawableTint="@color/light_gray_color"
+                    android:fontFamily="@font/normal_poppins"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_very_small"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/mIvOne"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvTotal"
+                    app:layout_constraintTop_toTopOf="@+id/mIvOne" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:elevation="@dimen/margin_1x"
+                android:background="@drawable/white_drawable_dark"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout11"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout11">
+
+                <ImageView
+                    android:id="@+id/mIvFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_winningiconnew"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/mTvTitleSectionFour"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Complete Leads"
+                    android:textSize="@dimen/text_very_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/mIvFour"
+                    app:layout_constraintTop_toBottomOf="@+id/mIvFour" />
+
+                <TextView
+                    android:id="@+id/mTvCompleted"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvTitleSectionFour"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionFour"
+                    app:layout_constraintTop_toBottomOf="@+id/mTvTitleSectionFour" />
+
+                <TextView
+                    android:id="@+id/mTvViewFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_rightarrow"
+                    android:drawableRight="@drawable/ic_rightarrow"
+                    android:drawablePadding="@dimen/margin_1x"
+                    android:drawableTint="@color/light_gray_color"
+                    android:fontFamily="@font/normal_poppins"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_very_small"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/mIvFour"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvCompleted"
+                    app:layout_constraintTop_toTopOf="@+id/mIvFour" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                android:elevation="@dimen/margin_1x"
+                android:background="@drawable/white_drawable_dark"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
+
+                <TextView
+                    android:id="@+id/textView69"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:text="Total Revenue"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/oultines_gray_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableRight="@drawable/ic_arrow_down"
+                        android:drawablePadding="@dimen/margin_1x"
+                        android:drawableTint="@color/hint_color"
+                        android:fontFamily="@font/normal_poppins"
+                        android:text="Date"
+                        android:textColor="@color/hint_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <lecho.lib.hellocharts.view.LineChartView
+                    android:id="@+id/mChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/white_drawable_dark"
+                android:elevation="@dimen/margin_1x"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
+
+                <TextView
+                    android:id="@+id/textView691"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:text="Money Statistic"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/oultines_gray_color"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvStatus2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableRight="@drawable/ic_arrow_down"
+                        android:drawablePadding="@dimen/margin_1x"
+                        android:drawableTint="@color/hint_color"
+                        android:fontFamily="@font/normal_poppins"
+                        android:text="Date"
+                        android:textColor="@color/hint_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageView66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView691"
+                    app:layout_constraintTop_toBottomOf="@+id/textView691"
+                    app:srcCompat="@drawable/ic_group_circle"
+                    android:scaleType="centerCrop"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/mTvMetricSales"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium_poppins"
+                    android:text="$ 5,680"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintEnd_toEndOf="@+id/textView72"
+                    app:layout_constraintStart_toStartOf="@+id/textView72"
+                    app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+                <TextView
+                    android:id="@+id/textView72"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Sales"
+                    android:textColor="#34B778"
+                    android:textSize="@dimen/text_very_small"
+                    app:layout_constraintEnd_toStartOf="@+id/textView74"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/textView691"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView66" />
+
+                <TextView
+                    android:id="@+id/mTvMetricRevenue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="$ 12,500"
+                    android:fontFamily="@font/medium_poppins"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintEnd_toEndOf="@+id/textView74"
+                    app:layout_constraintStart_toStartOf="@+id/textView74"
+                    app:layout_constraintTop_toBottomOf="@+id/textView72" />
+
+                <TextView
+                    android:id="@+id/textView74"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Revenue"
+                    android:textSize="@dimen/text_very_small"
+                    android:textColor="#F68D29"
+                    app:layout_constraintEnd_toStartOf="@+id/textView97"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView72"
+                    app:layout_constraintTop_toTopOf="@+id/textView72" />
+
+                <TextView
+                    android:id="@+id/mTvMetricExpense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium_poppins"
+                    android:text="$ 3,456"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintEnd_toEndOf="@+id/textView97"
+                    app:layout_constraintStart_toStartOf="@+id/textView97"
+                    app:layout_constraintTop_toBottomOf="@+id/textView97" />
+
+                <TextView
+                    android:id="@+id/textView97"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Expenses"
+                    android:textColor="#DC5454"
+                    android:textSize="@dimen/text_very_small"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView74"
+                    app:layout_constraintTop_toTopOf="@+id/textView72" />
+
+                <TextView
+                    android:id="@+id/mTvMetricNetIncome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:text="$5,0000"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView99"
+                    app:layout_constraintStart_toStartOf="@+id/textView99"
+                    app:layout_constraintTop_toBottomOf="@+id/textView99" />
+
+                <TextView
+                    android:id="@+id/textView99"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Net Income"
+                    android:textColor="#4F69C2"
+                    android:textSize="@dimen/text_very_small"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvMetricSales"
+                    app:layout_constraintStart_toStartOf="@+id/mTvMetricSales"
+                    app:layout_constraintTop_toBottomOf="@+id/mTvMetricSales" />
+
+                <TextView
+                    android:id="@+id/textView127"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Total work hours"
+                    android:textSize="@dimen/text_very_small"
+                    android:textColor="#4F69C2"
+                    android:fontFamily="@font/normal_poppins"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvMetricRevenue"
+                    app:layout_constraintStart_toStartOf="@+id/mTvMetricRevenue"
+                    app:layout_constraintTop_toTopOf="@+id/textView99" />
+
+                <TextView
+                    android:id="@+id/mTvMetricHr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04"
+                    android:fontFamily="@font/medium_poppins"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintStart_toStartOf="@+id/textView127"
+                    app:layout_constraintTop_toBottomOf="@+id/textView127" />
+
+                <TextView
+                    android:id="@+id/textView129"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="hrs"
+                    android:fontFamily="@font/normal_poppins"
+                    android:textSize="@dimen/text_very_small"
+                    android:textColor="@color/leads_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/mTvMetricHr"
+                    app:layout_constraintStart_toEndOf="@+id/mTvMetricHr"
+                    app:layout_constraintTop_toTopOf="@+id/mTvMetricHr" />
+
+                <TextView
+                    android:id="@+id/mTvMetricMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium_poppins"
+                    android:text="24"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_mediumLarge"
+                    app:layout_constraintStart_toEndOf="@+id/textView129"
+                    app:layout_constraintTop_toTopOf="@+id/mTvMetricHr" />
+
+                <TextView
+                    android:id="@+id/textView131"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="min"
+                    android:fontFamily="@font/normal_poppins"
+                    android:textSize="@dimen/text_very_small"
+                    android:textColor="@color/leads_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/mTvMetricMin"
+                    app:layout_constraintStart_toEndOf="@+id/mTvMetricMin"
+                    app:layout_constraintTop_toTopOf="@+id/mTvMetricMin" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout113"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/white_drawable_dark"
+                android:elevation="@dimen/margin_1x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+                app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout14">
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/simpleTabLayout"
+                    style="@style/MyCustomTabLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed"
+                    app:tabTextAppearance="@style/AppTabTextAppearance"
+                    app:tabTextColor="@color/black_color" />
+
+                <TextView
+                    android:id="@+id/mTvTitleSectionBelowRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:text="Projects"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/oultines_gray_color"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/mTvJobsFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableRight="@drawable/ic_arrow_down"
+                        android:drawablePadding="@dimen/margin_1x"
+                        android:drawableTint="@color/hint_color"
+                        android:fontFamily="@font/normal_poppins"
+                        android:text="All"
+                        android:textColor="@color/hint_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/mTvTitleSectionTwoBelowRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Project Name"
+                    android:textColor="@color/leads_color"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintEnd_toStartOf="@+id/mTvTitleSectionThreeBelowRecyclerView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionBelowRecyclerView"
+                    app:layout_constraintTop_toBottomOf="@+id/simpleTabLayout" />
+
+                <TextView
+                    android:id="@+id/mTvTitleSectionThreeBelowRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Date"
+                    android:textColor="@color/leads_color"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintEnd_toEndOf="@+id/textView37"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/mTvTitleSectionTwoBelowRecyclerView"
+                    app:layout_constraintTop_toTopOf="@+id/mTvTitleSectionTwoBelowRecyclerView" />
+
+                <View
+                    android:id="@+id/divider15"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvTitleSectionThreeBelowRecyclerView"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionTwoBelowRecyclerView"
+                    app:layout_constraintTop_toBottomOf="@+id/mTvTitleSectionTwoBelowRecyclerView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProjectsAnalyticsHome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="@+id/divider15"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionTwoBelowRecyclerView"
+                    app:layout_constraintTop_toBottomOf="@+id/divider15"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/row_item_invoicesanalytics" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProposalsAna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/divider15"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionTwoBelowRecyclerView"
+                    app:layout_constraintTop_toBottomOf="@+id/divider15"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/row_item_invoicesanalytics" />
+
+
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/textView80"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Showing 10 from 326"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView81"
+                    app:layout_constraintEnd_toStartOf="@+id/textView81"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView81" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/textView81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/oultines_gray_colortwo"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:drawablePadding="@dimen/margin_2x"
+                    android:drawableTint="@color/black_color"
+                    android:fontFamily="@font/normal_poppins"
+                    android:paddingStart="@dimen/margin_1x"
+                    android:paddingTop="@dimen/margin_1_1x"
+                    android:paddingEnd="@dimen/margin_1x"
+                    android:paddingBottom="@dimen/margin_1_1x"
+                    android:text="10"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView80"
+                    app:layout_constraintTop_toBottomOf="@+id/rvProjectsAnalyticsHome" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="12dp"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="100dp"
+
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/mIvShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="@dimen/margin_2x"
+            android:background="@drawable/app_color_cirlce_shape"
+            app:layout_constraintEnd_toStartOf="@+id/mIvNote"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_share"
+            tools:ignore="VectorDrawableCompat"
+            app:tint="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/mIvNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_color_cirlce_shape"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvShare"
+            app:layout_constraintEnd_toStartOf="@+id/mIvChat"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvShare"
+            app:layout_constraintTop_toTopOf="@+id/mIvShare"
+            app:srcCompat="@drawable/ic_notes"
+            tools:ignore="VectorDrawableCompat"
+            app:tint="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/mIvChats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvShare"
+            app:layout_constraintEnd_toStartOf="@+id/mIvGallaries"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvNote"
+            app:layout_constraintTop_toTopOf="@+id/mIvShare"
+           app:tint="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/mIvChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:padding="@dimen/margin_2x"
+            android:background="@drawable/app_color_cirlce_shape"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvShare"
+            app:layout_constraintEnd_toStartOf="@+id/mIvGallaries"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvNote"
+            app:layout_constraintTop_toTopOf="@+id/mIvShare"
+            app:srcCompat="@drawable/ic_chat"
+            tools:ignore="VectorDrawableCompat"
+           app:tint="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/mIvGallaries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_2x"
+            android:background="@drawable/app_color_cirlce_shape"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvShare"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvChat"
+            app:layout_constraintTop_toTopOf="@+id/mIvShare"
+            app:srcCompat="@drawable/ic_gallery"
+            tools:ignore="VectorDrawableCompat"
+           app:tint="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/textView121"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Share"
+            android:fontFamily="@font/normal_poppins"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/black_color"
+            app:layout_constraintEnd_toEndOf="@+id/mIvShare"
+            app:layout_constraintStart_toStartOf="@+id/mIvShare"
+            app:layout_constraintTop_toBottomOf="@+id/mIvShare" />
+
+        <TextView
+            android:id="@+id/textView139"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/normal_poppins"
+            android:text="Notes"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintEnd_toEndOf="@+id/mIvNote"
+            app:layout_constraintStart_toStartOf="@+id/mIvNote"
+            app:layout_constraintTop_toBottomOf="@+id/mIvNote" />
+
+        <TextView
+            android:id="@+id/textView140"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/normal_poppins"
+            android:text="Chat"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintEnd_toEndOf="@+id/mIvChats"
+            app:layout_constraintStart_toEndOf="@+id/mIvNote"
+            app:layout_constraintTop_toBottomOf="@+id/mIvChat" />
+
+        <TextView
+            android:id="@+id/textView141"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Gallary"
+            android:fontFamily="@font/normal_poppins"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/black_color"
+            app:layout_constraintEnd_toEndOf="@+id/mIvGallaries"
+            app:layout_constraintStart_toEndOf="@+id/mIvChats"
+            app:layout_constraintTop_toBottomOf="@+id/mIvGallaries" />
+
+
+        <ImageView
+            android:id="@+id/mIvExpensesJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="@dimen/margin_2x"
+            android:background="@drawable/app_color_cirlce_shape"
+            app:layout_constraintEnd_toStartOf="@+id/mIvNote"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView141"
+            app:srcCompat="@drawable/ic_expense"
+            tools:ignore="VectorDrawableCompat"
+           app:tint="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/mIvChatsJobs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvExpensesJob"
+            app:layout_constraintEnd_toStartOf="@+id/mIvInovicesJobs"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvExpensesJob"
+            app:layout_constraintTop_toTopOf="@+id/mIvExpensesJob"
+            app:srcCompat="@drawable/ic_proposals"
+            android:background="@drawable/app_color_cirlce_shape"
+            android:padding="@dimen/margin_2x"
+            tools:ignore="VectorDrawableCompat"
+           app:tint="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/mIvInovicesJobss"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvExpensesJob"
+            app:layout_constraintEnd_toStartOf="@+id/mIvGallaries"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvChatsJobs"
+            app:layout_constraintTop_toTopOf="@+id/mIvExpensesJob"
+           app:tint="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/mIvInovicesJobs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:background="@drawable/app_color_cirlce_shape"
+            android:padding="@dimen/margin_2x"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvExpensesJob"
+            app:layout_constraintEnd_toStartOf="@+id/mIvGallaries"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvNote"
+            app:layout_constraintTop_toTopOf="@+id/mIvExpensesJob"
+            app:srcCompat="@drawable/ic_invoices"
+           app:tint="@color/colorAccent"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/mIvPermitsJobs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvExpensesJob"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvChat"
+            app:layout_constraintTop_toTopOf="@+id/mIvExpensesJob"
+            app:srcCompat="@drawable/ic_documents"
+            android:background="@drawable/app_color_cirlce_shape"
+            android:padding="@dimen/margin_2x"
+            tools:ignore="VectorDrawableCompat"
+           app:tint="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/textView142"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Expenses"
+            android:fontFamily="@font/normal_poppins"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/black_color"
+            app:layout_constraintEnd_toEndOf="@+id/mIvExpensesJob"
+            app:layout_constraintStart_toStartOf="@+id/mIvExpensesJob"
+            app:layout_constraintTop_toBottomOf="@+id/mIvExpensesJob" />
+
+        <TextView
+            android:id="@+id/textView143"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/normal_poppins"
+            android:text="Estimates"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintEnd_toStartOf="@+id/mIvInovicesJobs"
+            app:layout_constraintStart_toEndOf="@+id/mIvExpensesJob"
+            app:layout_constraintTop_toBottomOf="@+id/mIvChatsJobs" />
+
+        <TextView
+            android:id="@+id/textView144"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invoices"
+            android:fontFamily="@font/normal_poppins"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/black_color"
+            app:layout_constraintEnd_toEndOf="@+id/mIvInovicesJobss"
+            app:layout_constraintStart_toEndOf="@+id/mIvChatsJobs"
+            app:layout_constraintTop_toTopOf="@+id/textView142" />
+
+        <TextView
+            android:id="@+id/textView145"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Documnets"
+            android:fontFamily="@font/normal_poppins"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/black_color"
+            app:layout_constraintEnd_toEndOf="@+id/mIvPermitsJobs"
+            app:layout_constraintStart_toEndOf="@+id/mIvInovicesJobss"
+            app:layout_constraintTop_toTopOf="@+id/textView142" />
+
+
+        <ImageView
+            android:visibility="visible"
+            android:id="@+id/mIvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="@dimen/margin_2x"
+            android:background="@drawable/app_color_cirlce_shape"
+            app:layout_constraintEnd_toStartOf="@+id/mIvNote"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView142"
+            app:srcCompat="@drawable/ic_paymentss"
+            tools:ignore="VectorDrawableCompat"
+           app:tint="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/mIvTimesheet"
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:background="@drawable/app_color_cirlce_shape"
+            android:padding="@dimen/margin_2x"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvCancel"
+            app:layout_constraintEnd_toStartOf="@+id/mIvInovicesJobs"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvExpensesJob"
+            app:layout_constraintTop_toTopOf="@+id/mIvCancel"
+            app:srcCompat="@drawable/ic_time"
+            tools:ignore="VectorDrawableCompat"
+           app:tint="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/mIvCancelJobs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:background="@drawable/app_color_cirlce_shape"
+            android:padding="@dimen/margin_2x"
+            android:src="@drawable/ic_cancel_black"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvCancel"
+            app:layout_constraintEnd_toStartOf="@+id/mIvGallaries"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvChatsJobs"
+            app:layout_constraintTop_toTopOf="@+id/mIvCancel"
+           app:tint="@color/colorAccent" />
+
+        <ImageView
+            android:id="@+id/mIvInovicesJobs1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvCancel"
+            app:layout_constraintEnd_toStartOf="@+id/mIvGallaries"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvNote"
+            app:layout_constraintTop_toTopOf="@+id/mIvCancel"
+            app:srcCompat="@drawable/ic_walletnewiconss"
+            app:tint="@color/colorAccent"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/mIvPermitsJobs1"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/mIvCancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mIvChat"
+            app:layout_constraintTop_toTopOf="@+id/mIvCancel"
+            app:srcCompat="@drawable/ic_sendnewiconss"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/textView146"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Charge"
+            android:fontFamily="@font/normal_poppins"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/black_color"
+            app:layout_constraintEnd_toEndOf="@+id/mIvCancel"
+            app:layout_constraintStart_toStartOf="@+id/mIvCancel"
+            app:layout_constraintTop_toBottomOf="@+id/mIvCancel" />
+
+        <TextView
+            android:id="@+id/textView1465"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/normal_poppins"
+            android:text="Clock In"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_medium"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/mIvTimesheet"
+            app:layout_constraintStart_toStartOf="@+id/mIvTimesheet"
+            app:layout_constraintTop_toBottomOf="@+id/mIvTimesheet" />
+
+        <TextView
+            android:id="@+id/textView105"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:text="Cancel Job"
+            android:fontFamily="@font/normal_poppins"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_medium"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/mIvCancelJobs"
+            app:layout_constraintStart_toStartOf="@+id/mIvCancelJobs"
+            app:layout_constraintTop_toBottomOf="@+id/mIvCancelJobs" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

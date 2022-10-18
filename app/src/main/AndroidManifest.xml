@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tradesk" >
+
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        android:minSdkVersion="30" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".BuildzerApp"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup"
+        tools:targetApi="q" >
+        <activity
+            android:name=".appCode.activities.PaymentSchduleActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".appCode.jobsModule.jobDetailModule.jobChatModule.ChatUsersActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.timesheetModule.jobTimesheetModule.JobTimeSheetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.calendarModule.monthDetailModule.CalendarActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.myProfileModule.FullViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".filemanager.SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".filemanager.FileExplorerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.addExpensesModule.AddExpenseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.addExpensesModule.ExpensesListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.jobsModule.jobDetailModule.OnGoingJobsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.proposalsModule.addProposalModule.OngoingJobsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.proposalsModule.addProposalModule.InvoicesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.ImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.PermitsImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.proposalsModule.addProposalModule.ProposaltemsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.proposalsModule.addProposalModule.PDFViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.proposalsModule.addProposalModule.PDFViewNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.proposalsModule.addProposalModule.SignatureActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.PDFActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="mailto" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".appCode.profileModule.settingsModule.changePassword.ChangePasswordActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.home.leadsDetail.CustomerDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.analyticsModule.analyticsHome.viewDetails.ViewDetailsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.analyticsModule.MainAnalyticsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.settingsModule.SettingsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.proposalsModule.addProposalModule.addClientModule.AddClientActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.proposalsModule.addProposalModule.AddProposalActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.usersContModule.UsersContrActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.jobsModule.jobDetailModule.jobChatModule.ChatActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".appCode.jobsModule.jobDetailModule.JobDetailActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.gallaryModule.GallaryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.gallaryModule.subGallaryModule.SubGallaryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.myProfileModule.MyProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.timesheetModule.TimesheetActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.proposalsModule.ProposalsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.home.leadsDetail.leadsNotesModule.addNotesModule.AddNotesActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.home.leadsDetail.leadsNotesModule.LeadNotesActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.home.leadsDetail.LeadsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.profileModule.documentsModule.DocumentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.home.customersModule.CustomersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.home.salePersonModule.AddSalesPersonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.home.salePersonModule.SalesPersonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.home.addLeadsModule.AddLeadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.home.addJobsModule.AddJobActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.forgotPassword.ForgotActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.signupModule.SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.loginModule.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".appCode.splashModule.SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".appCode.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Buildzer.NoActionBar" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service
+            android:name=".push.PushNotifications"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="OPEN_ACTIVITY_1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

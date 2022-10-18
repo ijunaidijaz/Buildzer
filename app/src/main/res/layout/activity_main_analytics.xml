@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".appCode.analyticsModule.MainAnalyticsActivity">
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sixforone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yllowcolor"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/mTvSix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/normal_poppins"
+            android:gravity="center"
+            android:padding="@dimen/margin_1x"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_mediumLarge"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white_color"
+            android:drawableStart="@drawable/ic_search"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="@dimen/margin_1x"
+            android:drawableTint="@color/light_gray_color"
+            android:ems="10"
+            android:hint="Search here..."
+            android:inputType="textPersonName"
+            android:padding="@dimen/margin_2x"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView61"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mTvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/medium_poppins"
+            android:inputType="textPersonName"
+            android:padding="@dimen/margin_2x"
+            android:textStyle="bold"
+            android:text="Dashboard"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_mediumLarge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView61"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView56"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/icon_dummy_user"
+            app:civ_border_color="@color/light_gray_color"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName9" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/imageView61"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="@dimen/margin_1x"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName9"
+            app:layout_constraintEnd_toStartOf="@+id/imageView56"
+            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName9"
+            app:srcCompat="@drawable/ic_notificationbell"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/imageView70"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/imageView61"
+            app:layout_constraintStart_toEndOf="@+id/imageView61"
+            app:layout_constraintTop_toTopOf="@+id/imageView61"
+            app:srcCompat="@drawable/ic_ellipse_red"
+            tools:ignore="VectorDrawableCompat" />
+
+        <View
+            android:id="@+id/divider29"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/light_gray_color_new_lighter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout8"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white_color"
+        android:visibility="visible"
+        app:itemIconTint="@drawable/selector_grey_red"
+        app:itemRippleColor="@color/colorAccent"
+        app:itemTextColor="@drawable/selector_text_grey_black"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/login_home_menu_analytics" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewLogin"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white_color"
+        android:visibility="invisible"
+        app:itemIconTint="@drawable/selector_grey_red"
+        app:itemRippleColor="@color/red_color"
+        app:itemTextColor="@drawable/selector_text_grey_black"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/login_home_menu" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationViewSales"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white_color"
+        android:visibility="visible"
+        app:itemIconTint="@drawable/selector_grey_red"
+        app:itemRippleColor="@color/colorAccent"
+        app:itemTextColor="@drawable/selector_text_grey_black"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/login_home_menu_sales" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

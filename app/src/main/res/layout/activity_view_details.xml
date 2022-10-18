@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".appCode.analyticsModule.analyticsHome.viewDetails.ViewDetailsActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/medium_poppins"
+            android:text="View Details"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_mediumLarge"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mIvBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/mIvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/margin_1x"
+            android:src="@drawable/ic_back_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.272" />
+
+        <ImageView
+            android:id="@+id/mIvAddNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:padding="@dimen/margin_1x"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_plus_leads"
+            tools:ignore="MissingPrefix,VectorDrawableCompat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayoutView"
+                style="@style/AppTabLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                android:visibility="gone"
+                app:tabTextAppearance="@style/AppTabTextAppearance"
+                app:tabTextColor="@color/black_color" />
+
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/editTextTextPersonName6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:drawableStart="@drawable/ic_search"
+                android:drawableLeft="@drawable/ic_search"
+                android:drawablePadding="@dimen/margin_1x"
+                android:ems="10"
+                android:fontFamily="@font/normal_poppins"
+                android:hint="Search..."
+                android:inputType="textPersonName"
+                android:padding="@dimen/margin_2x"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabLayoutView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout113"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_drawable_dark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabLayoutView">
+
+                <TextView
+                    android:id="@+id/mTvTitleSectionBelowRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:text="Projects"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/textView37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/oultines_gray_color"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/mTvJobsFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableRight="@drawable/ic_arrow_down"
+                        android:drawablePadding="@dimen/margin_1x"
+                        android:drawableTint="@color/hint_color"
+                        android:fontFamily="@font/normal_poppins"
+                        android:text="All"
+                        android:textColor="@color/hint_color"
+                        android:textSize="@dimen/text_medium"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/mTvTitleSectionTwoBelowRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:text="Project Name"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toStartOf="@+id/mTvTitleSectionThreeBelowRecyclerView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionBelowRecyclerView"
+                    app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+                <TextView
+                    android:id="@+id/mTvTitleSectionThreeBelowRecyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/medium_poppins"
+                    android:text="Description"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="@+id/textView37"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/mTvTitleSectionTwoBelowRecyclerView"
+                    app:layout_constraintTop_toTopOf="@+id/mTvTitleSectionTwoBelowRecyclerView" />
+
+                <View
+                    android:id="@+id/divider15"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="@+id/mTvTitleSectionThreeBelowRecyclerView"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionTwoBelowRecyclerView"
+                    app:layout_constraintTop_toBottomOf="@+id/mTvTitleSectionTwoBelowRecyclerView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvProjectsAnalyticsHome"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toEndOf="@+id/divider15"
+                    app:layout_constraintStart_toStartOf="@+id/mTvTitleSectionTwoBelowRecyclerView"
+                    app:layout_constraintTop_toBottomOf="@+id/divider15"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/row_item_invoicesanalytics" />
+
+
+                <TextView
+                    android:id="@+id/textView80"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    android:fontFamily="@font/normal_poppins"
+                    android:text="Showing 10 from 326"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView81"
+                    app:layout_constraintEnd_toStartOf="@+id/textView81"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView81" />
+
+                <TextView
+                    android:id="@+id/textView81"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/oultines_gray_colortwo"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:drawablePadding="@dimen/margin_2x"
+                    android:drawableTint="@color/black_color"
+                    android:fontFamily="@font/normal_poppins"
+                    android:paddingStart="@dimen/margin_1x"
+                    android:paddingTop="@dimen/margin_1_1x"
+                    android:paddingEnd="@dimen/margin_1x"
+                    android:paddingBottom="@dimen/margin_1_1x"
+                    android:text="10"
+                    android:textColor="@color/black_color"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView80"
+                    app:layout_constraintTop_toBottomOf="@+id/rvProjectsAnalyticsHome" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

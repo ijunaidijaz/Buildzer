@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".appCode.PDFActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Create Proposal"
+            android:fontFamily="@font/medium_poppins"
+            android:textColor="@color/black_color"
+            android:textSize="@dimen/text_mediumLarge"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/mIvBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/mIvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/margin_1x"
+            android:src="@drawable/ic_back_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.272" />
+
+        <ImageView
+            android:id="@+id/mIvAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="@dimen/margin_1x"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_plus_leads"
+            tools:ignore="VectorDrawableCompat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/contentView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <LinearLayout
+            android:id="@+id/llItemInflater"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btnAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="20dp"
+            android:text="Add Proposal Content"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white_color"
+            android:fontFamily="@font/normal_poppins"
+            android:background="@drawable/button_rounded_shape"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnPreviewPDF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="20dp"
+            android:text="Preview proposal PDF"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white_color"
+            android:fontFamily="@font/normal_poppins"
+            android:background="@drawable/button_rounded_shape"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pdfContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white_color"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/margin_2x"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnEditPDF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_2x"
+                android:layout_marginRight="@dimen/margin_5x"
+                android:background="@drawable/givebackroundedetbg"
+                android:backgroundTint="@color/blue"
+                android:paddingHorizontal="@dimen/margin_5x"
+                android:paddingVertical="@dimen/margin_1x"
+                android:text="Edit PDF"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/text_medium"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_2x"
+                android:layout_marginRight="@dimen/margin_5x"
+                android:background="@drawable/givebackroundedetbg"
+                android:backgroundTint="@color/blue"
+                android:paddingHorizontal="@dimen/margin_5x"
+                android:paddingVertical="@dimen/margin_1x"
+                android:text="Share"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/text_medium"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_color"
+            android:gravity="center_horizontal|top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

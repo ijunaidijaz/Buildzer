@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/all"
+        android:title="All" />
+    <item
+        android:id="@+id/follow"
+        android:title="Follow Up" />
+    <!--<item
+        android:id="@+id/junk"
+        android:title="Junk" />
+    <item
+        android:id="@+id/reload"
+        android:title="Reload" />
+    --><item
+        android:id="@+id/sale"
+        android:title="Sale" />
+</menu>

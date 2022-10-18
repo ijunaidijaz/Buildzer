@@ -1,0 +1,242 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" tools:targetApi="lollipop">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowAnimationStyle">@style/ActivityEnterTheme</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+        <item name="snackbarStyle">@style/MySnackBarStyle</item>
+
+
+        <!--<item name="android:windowAnimationStyle">@style/ActivityEnterTheme</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->
+    </style>
+
+    <!-- snackbar style in res/values -->
+    <style name="MySnackBarStyle" parent="Widget.MaterialComponents.Snackbar">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/white_color</item>
+    </style>
+    <style name="AppBlueTheme" parent="Theme.AppCompat.Light.NoActionBar" tools:targetApi="lollipop">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/email_end_color</item>
+        <item name="colorPrimaryDark">@color/email_end_color</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:windowAnimationStyle">@style/ActivityEnterTheme</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+
+
+        <!--<item name="android:windowAnimationStyle">@style/ActivityEnterTheme</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->
+    </style>
+    <style name="editTextStyle">
+        <item name="android:textColor">@color/black_color</item>
+        <item name="android:inputType">textCapSentences</item>
+        <item name="android:paddingLeft">@dimen/_10sdp</item>
+        <item name="android:paddingRight">@dimen/_10sdp</item>
+        <item name="android:paddingTop">@dimen/_5sdp</item>
+        <item name="android:paddingBottom">@dimen/_5sdp</item>
+        <item name="android:background">@drawable/curved_edit_text_bg</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="ActivityEnterTheme" parent="@android:style/Animation.Activity">>
+        <item name="android:activityOpenEnterAnimation">@anim/trans_left_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/trans_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/trans_right_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/trans_right_out</item>
+    </style>
+
+
+    <!-- Splash Activity theme. -->
+    <style name="Theme.Splash" parent="AppTheme">
+        <!--<item name="android:windowBackground">@drawable/splash</item>-->
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+   <!-- <style name="dialogRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar</item>
+        <item name="android:height">@dimen/large_margin</item>
+        <item name="android:width">@dimen/large_margin</item>
+    </style>-->
+
+    <style name="Widget"/>
+
+    <style name="RatingTheme" parent="RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
+    </style>
+    <style name="Widget.ProgressBar">
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+    </style>
+
+    <style name="Widget.ProgressBar.VerticalOne">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_one</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+    </style>
+
+    <style name="Widget.ProgressBar.VerticalTwo">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_two</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+    </style>
+
+    <style name="Widget.ProgressBar.VerticalThree">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_three</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+    </style>
+
+    <style name="Widget.ProgressBar.VerticalFour">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_four</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+    </style>
+
+    <style name="Widget.ProgressBar.VerticalSix">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_six</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+    </style>
+
+
+<!--
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_mediumLarge</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">@font/ptsans_regular</item>
+        <item name="android:layout_width">34dp</item>
+    </style>
+-->
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/white_color</item>
+        <item name="colorControlActivated">@color/gold_color</item>
+    </style>
+
+    <style name="RatingBarProfile" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/dark_gray_color</item>
+        <item name="colorControlActivated">@color/sign_in_btn_color2</item>
+    </style>
+
+
+    <style name="RatingBarEvents" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/light_gray_color_new</item>
+        <item name="colorControlActivated">@color/event_toolbar_color_one</item>
+    </style>
+
+
+    <style name="PauseDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/PauseDialogAnimation</item>
+    </style>
+
+    <style name="PauseDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom</item>
+    </style>
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorControlNormal">@color/black_color</item>   <!-- normal border color change as you wish -->
+        <item name="colorControlActivated">@color/colorAccent</item> <!-- activated color change as you wish -->
+        <item name="android:textColor">@color/black_color</item> <!-- checkbox text color -->
+    </style>
+
+
+
+    <style name="pin_edittext_style">
+        <item name="android:gravity">center</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:minEms">1</item>
+        <item name="android:inputType">number</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">@color/black_color</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+       <!-- <item name="tabBackground">@drawable/tab_bg</item>-->
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabIndicatorHeight">4dp</item>
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabPaddingStart">6dp</item>
+        <item name="tabPaddingEnd">6dp</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+        <item name="tabIndicatorColor">@color/colorPrimary</item>
+        <!--<item name="tabIndicatorHeight">1dp</item>
+        <item name="tabPaddingStart">6dp</item>
+        <item name="tabPaddingEnd">6dp</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/white_color</item>-->
+    </style>
+
+
+    <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabIndicatorHeight">3dp</item>
+        <item name="tabPaddingStart">1dp</item>
+        <item name="tabPaddingEnd">1dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+        <item name="tabSelectedTextColor">@color/colorAccent</item>
+    </style>
+
+
+    <!-- for text -->
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black_color</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/normal_poppins</item>
+    </style>
+
+
+
+    <style name="DialogAnimationNew">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+        <item name="android:animationDuration">5000</item>
+    </style>
+
+    <style name="SpinnerDatePickerDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:calendarViewShown">false</item>
+        <item name="android:datePickerMode" tools:targetApi="lollipop">spinner</item>
+    </style>
+</resources>

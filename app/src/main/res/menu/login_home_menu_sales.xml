@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_activitygrey"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/menu_revenue"
+        android:icon="@drawable/ic_currencycircledollar"
+        android:title="Revenue" />
+    <item
+        android:id="@+id/menu_time"
+        android:icon="@drawable/ic_time_circleorange"
+        android:title="Timesheet" />
+
+</menu>
